@@ -1,1 +1,1 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/shdqudoifehg7ky5?svg=true)](https://ci.appveyor.com/project/nikolaikop/carddelivevryfaker)
+[![Build status](https://ci.appveyor.com/api/projects/status/6al83wxepacsuy4t?svg=true)](https://ci.appveyor.com/project/nikolaikop/pageobjects)
