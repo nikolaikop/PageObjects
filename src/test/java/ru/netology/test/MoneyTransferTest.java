@@ -18,11 +18,11 @@ public class MoneyTransferTest {
 
     @Test
     void shouldTransferMoneyBetweenPersonalCardsFrom2To1() {
-        var loginPage = new LoginPage();
-        var authInfo = DataHelper.getAuthInfo();      //получение логина и пароля
-        var verificationPage = loginPage.validLogin(authInfo);   //ввод данных
-        var verificationCode = DataHelper.getVerificationCodeFor(authInfo);  //получение кода СМС
-        var dashboardCardPage = verificationPage.validVerify(verificationCode);  //ввод смс
+        val loginPage = new LoginPage();
+        val authInfo = DataHelper.getAuthInfo();      //получение логина и пароля
+        val verificationPage = loginPage.validLogin(authInfo);   //ввод данных
+        val verificationCode = DataHelper.getVerificationCodeFor(authInfo);  //получение кода СМС
+        val dashboardCardPage = verificationPage.validVerify(verificationCode);  //ввод смс
         String sumRep = "500";  //сумма пополнения
         val balance_1_CardBefoRep = dashboardCardPage.infoBalanceCard(DataHelper.getCard1().getNumber());  //получение баланса 1 карты до перевода
         val balance_2_CardBefoRep = dashboardCardPage.infoBalanceCard(DataHelper.getCard2().getNumber());  //получение баланса 2 карты до перевода
@@ -38,11 +38,11 @@ public class MoneyTransferTest {
 
     @Test
     void shouldTransferMoneyBetweenPersonalCardsFrom1To2() {
-        var loginPage = new LoginPage();
-        var authInfo = DataHelper.getAuthInfo();      //получение логина и пароля
-        var verificationPage = loginPage.validLogin(authInfo);   //ввод данных
-        var verificationCode = DataHelper.getVerificationCodeFor(authInfo);  //получение кода СМС
-        var dashboardCardPage = verificationPage.validVerify(verificationCode);  //ввод смс
+        val loginPage = new LoginPage();
+        val authInfo = DataHelper.getAuthInfo();      //получение логина и пароля
+        val verificationPage = loginPage.validLogin(authInfo);   //ввод данных
+        val verificationCode = DataHelper.getVerificationCodeFor(authInfo);  //получение кода СМС
+        val dashboardCardPage = verificationPage.validVerify(verificationCode);  //ввод смс
         String sumRep = "500";  //сумма пополнения
         val balance_1_CardBefoRep = dashboardCardPage.infoBalanceCard(DataHelper.getCard1().getNumber());  //получение баланса 1 карты до перевода
         val balance_2_CardBefoRep = dashboardCardPage.infoBalanceCard(DataHelper.getCard2().getNumber());  //получение баланса 2 карты до перевода
@@ -58,11 +58,11 @@ public class MoneyTransferTest {
 
     @Test
     void shouldntDepositAmountExceedsActualAmount() {
-        var loginPage = new LoginPage();
-        var authInfo = DataHelper.getAuthInfo();      //получение логина и пароля
-        var verificationPage = loginPage.validLogin(authInfo);   //ввод данных
-        var verificationCode = DataHelper.getVerificationCodeFor(authInfo);  //получение кода СМС
-        var dashboardCardPage = verificationPage.validVerify(verificationCode);  //ввод смс
+        val loginPage = new LoginPage();
+        val authInfo = DataHelper.getAuthInfo();      //получение логина и пароля
+        val verificationPage = loginPage.validLogin(authInfo);   //ввод данных
+        val verificationCode = DataHelper.getVerificationCodeFor(authInfo);  //получение кода СМС
+        val dashboardCardPage = verificationPage.validVerify(verificationCode);  //ввод смс
         val balance_1_CardBefoRep = dashboardCardPage.infoBalanceCard(DataHelper.getCard1().getNumber());  //получение баланса 1 карты до перевода
         val balance_2_CardBefoRep = dashboardCardPage.infoBalanceCard(DataHelper.getCard2().getNumber());  //получение баланса 2 карты до перевода
         int sumRepPlus=balance_1_CardBefoRep+800;// получение сууммы превышающей остаток на счету
